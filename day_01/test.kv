@@ -1,0 +1,25 @@
+#:kivy 1.0.9
+
+<TestView>:
+  warning: pong_ball
+  pressure: player_left
+  temperature: player_right
+  
+  Label:
+    font_size: 70  
+    center_x: root.width / 4
+    top: root.top - 50
+    text: str(root.warning.value)
+     
+  Label:
+    font_size: 70  
+    center_x: root.width * 1 / 2
+    top: root.top - 50
+    text: str(root.pressure.value)    
+    
+  Label:
+    font_size: 70  
+    center_x: root.width * 3 / 4
+    top: root.top - 50
+    text: str(root.temperature.value)
+    
