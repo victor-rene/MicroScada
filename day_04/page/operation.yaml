@@ -1,0 +1,55 @@
+lbl_title:
+  type: 'label'
+  text: 'Operation'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.75
+  font-size: 36
+  
+vl_01:
+  type: 'var-label'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.4
+  variable: 'MW_01'
+  
+vl_02:
+  type: 'var-label'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  variable: 'MW_02'
+  
+vl_03:
+  type: 'var-label'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.6
+  variable: 'M_01'
+  
+btn_start:
+  type: 'button'
+  text: 'Start'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  click: datamgr.start_clock
+  
+btn_stop:
+  type: 'button'
+  text: 'Stop'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  click: datamgr.stop_clock
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: home

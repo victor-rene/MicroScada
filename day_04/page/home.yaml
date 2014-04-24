@@ -1,0 +1,61 @@
+lbl_title:
+  type: 'label'
+  text: 'MicroScada'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.75
+  font-size: 36
+  
+btn_settings:
+  type: 'button'
+  text: 'Settings'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.3
+  size_hint: 0.2, 0.1
+  link: settings
+  
+btn_operation:
+  type: 'button'
+  text: 'Operation'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.3
+  size_hint: 0.2, 0.1
+  link: operation
+  
+btn_stats:
+  type: 'button'
+  text: 'Statistics'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.3
+  size_hint: 0.2, 0.1
+  link: statistics
+  
+btn_pipes:
+  type: 'button'
+  text: 'Pipes'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: pipes
+  
+btn_prefs:
+  type: 'button'
+  text: 'Preferences'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: preferences
+  
+btn_about:
+  type: 'button'
+  text: 'About'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: about

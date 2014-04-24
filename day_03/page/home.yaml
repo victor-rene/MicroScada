@@ -1,0 +1,35 @@
+label:
+  text: 'MicroScada'
+  position: 760, 50
+  size: 200, 100
+  font-size: 36
+  
+button:
+  text: 'Settings'
+  position: 560, 800
+  size: 100, 50
+  click: open_page('settings.yaml')
+  
+button:
+  text: 'Operation'
+  position: 860, 800
+  size: 100, 50
+  click: open_page('operation.yaml')
+  
+button:
+  text: 'Preferences'
+  position: 1160, 800
+  size: 100, 50
+  click: open_page('preferences.yaml')
+  
+button:
+  text: 'Statistics'
+  position: 710, 900
+  size: 100, 50
+  click: open_page('statistics.yaml')
+  
+button:
+  text: 'About'
+  position: 910, 900
+  size: 100, 50
+  click: open_page('about.yaml')
