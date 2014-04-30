@@ -1,0 +1,82 @@
+lbl_title:
+  type: 'label'
+  text: 'Operation'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.85
+  font-size: '24sp'
+  
+vl_01:
+  type: 'var-label'
+  size_hint: 0.6, 0.05
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.3
+  variable: 'MW_01'
+  
+vl_02:
+  type: 'var-label'
+  size_hint: 0.6, 0.05
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  variable: 'MW_02'
+  
+vl_03:
+  type: 'var-label'
+  size_hint: 0.6, 0.05
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.7
+  variable: 'M_01'
+  
+warning_led:
+  type: 'led'
+  size_hint: 0.05, 0.05
+  pos_hint:
+    center_x: 0.9
+    center_y: 0.7
+  variable: 'M_01'
+  
+thermo:
+  type: 'thermometer'
+  size_hint: 0.05, .2
+  pos_hint:
+    center_x: 0.9
+    center_y: 0.5
+  variable: 'MW_02'
+  
+mano:
+  type: 'manometer'
+  size_hint: 0.1, 0.13
+  pos_hint:
+    center_x: 0.9
+    center_y: 0.3
+  variable: 'MW_01'
+  
+btn_start:
+  type: 'button'
+  text: 'Start'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  click: Scheduler.start
+  
+btn_stop:
+  type: 'button'
+  text: 'Stop'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  click: Scheduler.stop
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: home
