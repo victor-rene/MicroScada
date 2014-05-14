@@ -85,31 +85,24 @@ class Graph(FloatLayout):
       Color(1,1,1)
       mid_x = self.x + self.width / 2
       Line(points = [mid_x, self.y, mid_x, self.top])
-
-  def set_zoom(self, zoom):
-    if zoom < 1:
-      self.zoom = 1
-    elif zoom > 1440:
-      self.zoom = 1440
-    else: self.zoom = zoom
-    self.calc_points()
-    self.draw_points()
        
   def zoom_in(self, *args):
-    self.set_zoom(self.zoom * 2)
-    self.offset = self.offset * 2 + self.width / 2
-    self.calc_points()
-    self.draw_points()
-    from pageloader import get_widget
-    get_widget('lbl_zoom').text = 'x' + str(self.zoom)
+    if self.zoom < 32:
+      self.zoom *= 2.
+      self.offset = self.offset * 2. + self.width / 2
+      self.calc_points()
+      self.draw_points()
+      from pageloader import get_widget
+      get_widget('lbl_zoom').text = 'x' + str(self.zoom)
     
   def zoom_out(self, *args):
-    self.set_zoom(self.zoom * .5)
-    self.offset = (self.offset - self.width / 2 ) * .5 
-    self.calc_points()
-    self.draw_points()
-    from pageloader import get_widget
-    get_widget('lbl_zoom').text = 'x' + str(self.zoom)
+    if self.zoom > 1:
+      self.zoom *= .5
+      self.offset = (self.offset - self.width / 2 ) * .5 
+      self.calc_points()
+      self.draw_points()
+      from pageloader import get_widget
+      get_widget('lbl_zoom').text = 'x' + str(self.zoom)
     
   def on_touch_down(self, touch):
     if not self.collide_point(touch.x, touch.y):

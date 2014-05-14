@@ -1,6 +1,8 @@
 import os, util
 from kivy.uix.image import Image
 from kivy.uix.gridlayout import GridLayout
+# from kivy.uix.popup import Popup
+# from variableselector import VariableSelector
 from datamgr import variables
 
 
@@ -18,6 +20,7 @@ class Binding:
     elif self.source.value == 0:
       self.target.source = os.path.join(util.dir_img, 'led_red.png')
 
+      
 class Led(GridLayout):
 
   def __init__(self, **kwargs):
@@ -28,11 +31,12 @@ class Led(GridLayout):
     self.add_widget(self.image)
     self.bind(pos=self.update_img)
     self.bind(size=self.update_img)
+    self.variable = None
       
   def set_var(self, name):
-    variable = variables[name]
-    binding = Binding(variable, 'value', self.image, None)
-    variable.bindings.append(binding)
+    self.variable = variables[name]
+    binding = Binding(self.variable, 'value', self.image, None)
+    self.variable.bindings.append(binding)
     
   def update_img(self, *args):
     self.image.pos = self.pos

@@ -82,7 +82,7 @@ date_picker:
   
 lbl_zoom:
   type: 'label'
-  text: 'zoom'
+  text: 'x1.0'
   pos_hint:
     center_x: 0.5
     center_y: 0.05
