@@ -10,7 +10,7 @@ Requires sqlite3 (built-in) and PyYAML (using v3.08)
 
  - Download at http://pyyaml.org/wiki/PyYAML
  - On Windows, install using pip or drop the files in lib/site-packages
- - On Linux, drop the yaml directory next to 'main.py'
+ - On Android (Ubuntu VM), drop the yaml directory next to 'main.py'
  
 Features
 --------
