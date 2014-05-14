@@ -31,6 +31,7 @@ class Graph(FloatLayout):
     self.variable = None
     self.zoom = 1.0
     self.offset = 0
+    self.listeners = []
     load_vars()
     with self.canvas.before:
       Color(.1,.1,.1)
@@ -62,7 +63,7 @@ class Graph(FloatLayout):
       y = self.height * scale_y + self.y
       str_time = util.get_time(item[3])
       scale_x = util.get_time_float(str_time)
-      x = self.width * scale_x * self.zoom + self.x - self.offset * self.zoom
+      x = self.width * scale_x * self.zoom + self.x - self.offset
       if x >= self.x and x <= self.right:
         self.points.append(x)
         self.points.append(y)
@@ -85,7 +86,6 @@ class Graph(FloatLayout):
       mid_x = self.x + self.width / 2
       Line(points = [mid_x, self.y, mid_x, self.top])
 
-    
   def set_zoom(self, zoom):
     if zoom < 1:
       self.zoom = 1
@@ -96,14 +96,20 @@ class Graph(FloatLayout):
     self.draw_points()
        
   def zoom_in(self, *args):
-    self.set_zoom(self.zoom * 2.)
+    self.set_zoom(self.zoom * 2)
+    self.offset = self.offset * 2 + self.width / 2
     self.calc_points()
     self.draw_points()
+    from pageloader import get_widget
+    get_widget('lbl_zoom').text = 'x' + str(self.zoom)
     
   def zoom_out(self, *args):
     self.set_zoom(self.zoom * .5)
+    self.offset = (self.offset - self.width / 2 ) * .5 
     self.calc_points()
     self.draw_points()
+    from pageloader import get_widget
+    get_widget('lbl_zoom').text = 'x' + str(self.zoom)
     
   def on_touch_down(self, touch):
     if not self.collide_point(touch.x, touch.y):
@@ -124,7 +130,7 @@ class Graph(FloatLayout):
       max_offset = self.width * self.zoom - self.width
       dx = touch.dx / self.zoom
       new_offset = self.offset + dx
-      print self.offset, new_offset
+      # print self.offset, new_offset
       if new_offset < min_offset:
         self.offset = 0
       elif new_offset > max_offset:
@@ -132,6 +138,28 @@ class Graph(FloatLayout):
       else: self.offset = new_offset
       self.calc_points()
       self.draw_points()
+      self.set_times()
     if n_touches > 1:
       curr_dist = self.touches[0].distance(self.touches[1])
       self.set_zoom(curr_dist / self.dist)
+    
+  def append_listener(self, widget):
+    self.listeners.append(widget)
+    
+  def remove_listener(self, widget):
+    self.listeners.remove(widget)
+    
+  def set_times(self):
+    t_mid = (self.offset + self.width / 2) / (self.zoom * self.width)
+    str_mid = util.get_time_str(t_mid)
+    t_min = self.offset / (self.zoom * self.width)
+    str_min = util.get_time_str(t_min)
+    t_max = (self.offset + self.width) / (self.zoom * self.width)
+    str_max = util.get_time_str(t_max)
+    for listener in self.listeners:
+      if 'max' in listener.id:
+        listener.text = str_max
+      elif 'mid' in listener.id:
+        listener.text = str_mid
+      elif 'min' in listener.id:
+        listener.text = str_min

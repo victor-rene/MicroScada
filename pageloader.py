@@ -44,7 +44,7 @@ def load_page(name):
 def build_page(layout, page):
   layout.clear_widgets()
   links.clear() # TODO: will prevent iframe functionality to work
-  for id, item in page.iteritems():
+  for id, item in page.iteritems(): # create instances (ids)
     if item['type'] == 'button':
       wgt = Button()
       if Preferences.theme != 'default':
@@ -87,6 +87,9 @@ def build_page(layout, page):
       print 'Unknown component ' + item['type']
       return
     wgt.id = id
+    layout.add_widget(wgt)
+  for id, item in page.iteritems(): # now can use references (id)
+    wgt = get_widget(id)
     if 'text' in item:
       wgt.text = item['text']
     if 'font_size' in item:
@@ -118,7 +121,7 @@ def build_page(layout, page):
         wgt.append_listener(get_widget(listener.strip()))
     if 'markup' in item:
       wgt.markup = item['markup']
-    layout.add_widget(wgt)
+    
   
   
 def open_page(name, layout=None):
@@ -136,6 +139,7 @@ def navigate(instance):
   
 def get_widget(id):
   for wgt in root_widget.children:
+    print wgt.id
     if wgt.id == id:
       return wgt
     

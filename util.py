@@ -14,6 +14,12 @@ def get_time_float(s):
   s = int(s[6:8])
   return h / 24.0 + m / (24.0 * 60.0) + s / (24.0 * 60.0 * 60)
   
+def get_time_str(f):
+  h = int( f * 24 )
+  m = int( (f * 24 * 60) % 60 )
+  s = int( (f * 24 * 60 * 60) % 60 )
+  return str(h).zfill(2) + ":" + str(m).zfill(2) + ":" + str(s).zfill(2)
+  
 def get_time(s):
   return s.split()[1]
   

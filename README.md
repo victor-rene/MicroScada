@@ -1,4 +1,7 @@
 MicroScada
 ==========
 
-Lightweight modular SCADA framework for desktop, mobile and web hmi applications.
+Demo SCADA framework for desktop and mobile.
+
+Blog at: http://victor-rene.com
+Projects: http://logiqub.com
