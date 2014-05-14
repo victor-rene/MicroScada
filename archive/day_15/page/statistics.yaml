@@ -1,0 +1,58 @@
+lbl_title:
+  type: 'label'
+  text: 'Statistics'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  size_hint: 0.1, 0.
+  font_size: 24
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  link: home
+  
+graph:
+  type: graph
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.55
+  size_hint: 0.8, 0.7
+  
+vl:
+  type: 'var-label'
+  size_hint: 0.8, 0.05
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.15
+  listener: graph
+  
+date_picker:
+  type: 'DatePicker'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  listener: graph
+  
+btn_zoom_in:
+  type: 'button'
+  text: 'Zoom in'
+  pos_hint:
+    center_x: 0.4
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: get_widget('graph').zoom_in
+  
+btn_zoom_out:
+  type: 'button'
+  text: 'Zoom out'
+  pos_hint:
+    center_x: 0.6
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: get_widget('graph').zoom_out

@@ -1,0 +1,29 @@
+[Kivy - http://kivy.org - stable branch = 1.8.0 - master branch = 1.8.1-dev ! - https://groups.google.com/forum/#!/forum/kivy-users - European Central Time (mostly)! - Channel is logged at https://botbot.me/freenode/kivy/]
+[16:38] == kvuser0 [5a188963@gateway/web/freenode/ip.90.24.137.99] has joined #kivy
+[16:38] == Lobstaman3 [~Lobstaman@unassigned-210.158.252.66.net.blink.ca] has joined #kivy
+[16:39] <+aspidites> i'm starting to think transluscent terminals might have been a bad idea
+[16:40] <kvuser0> Hello there (I think i'm lost...) Can someone help me ? I would like to know something about the contest.
+[16:40] <+aspidites> ah, much better
+[16:40] == BlaXpirit-UA [~blaxpirit@14-69-132-95.pool.ukrtel.net] has joined #kivy
+[16:41] <+aspidites> kvuser0: ask away
+[16:41] == BlaXpirit [~blaxpirit@63-65-132-95.pool.ukrtel.net] has quit [Ping timeout: 276 seconds]
+[16:42] <kvuser0> Okay, so basically, I found out late about the contest, I still registered on the form. I had this project in mind for some time and it fits the education theme perfectly
+[16:42] <kvuser0> I had setup my blog and my git repo, searching the techno or opportunity to det going
+[16:43] <kvuser0> Found out about contest after it was started. Who can tell me if my application can be accepted
+[16:43] <+inclement> kvuser0: Your application can certainly be accepted, it's fine :)
+[16:44] == donnaloia [~donnaloia@71-20-1-73.war.clearwire-wmx.net] has joined #kivy
+[16:44] <kvuser0> Oh, that's awesome then. The thing is we don't get answers by email or anything so I was worried.
+[16:44] <+inclement> You already submitted the form? I can check that we received your details if you like
+[16:45] <kvuser0> I would love it. My name is Victor RENE. Email victor-rene@outlook.com
+[16:45] == inclement [~inclement@toast.dur.ac.uk]
+[16:45] ==  realname : inclement
+[16:45] ==  channels : +#kivy
+[16:45] ==  server   : holmes.freenode.net [London, UK]
+[16:45] ==  account  : inclement
+[16:45] == End of WHOIS
+[16:45] <+inclement> Got it, with MicroScada?
+[16:45] <kvuser0> Yeah, that's my project
+[16:46] <+inclement> Yup, we've got your entry then, good luck with the contest!
+[16:46] <kvuser0> Thank you for your help. Have a nice day!
+[16:46] <+inclement> And feel free to submit the form again if there are any changes or anything, we'll update the existing entry
+[16:47] <kvuser0> Okay I got that =)

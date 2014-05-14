@@ -1,0 +1,116 @@
+lbl_title:
+  type: 'label'
+  text: 'Pipeline editor'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  size_hint: 0.1, 0.
+  font_size: 24
+
+edit_grid:
+  type: 'edit-grid'
+  rows: 7
+  cols: 7
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  size_hint: 0.7, 0.7
+
+btn_i_pipe:
+  type: 'button'
+  text: 'I-pipe'
+  pos_hint:
+    center_x: 0.05
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.pipe_i
+  
+btn_l_pipe:
+  type: 'button'
+  text: 'L-pipe'
+  pos_hint:
+    center_x: 0.15
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.pipe_l
+  
+btn_t_pipe:
+  type: 'button'
+  text: 'T-pipe'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.pipe_t
+  
+btn_x_pipe:
+  type: 'button'
+  text: 'X-pipe'
+  pos_hint:
+    center_x: 0.35
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.pipe_x
+  
+btn_pump:
+  type: 'button'
+  text: 'Pump'
+  pos_hint:
+    center_x: 0.45
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.pump
+  
+btn_valve:
+  type: 'button'
+  text: 'Valve'
+  pos_hint:
+    center_x: 0.55
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.valve
+  
+btn_gauge:
+  type: 'button'
+  text: 'Gauge'
+  pos_hint:
+    center_x: 0.65
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.gauge
+  
+btn_left:
+  type: 'button'
+  text: 'Left'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.turn_left
+  
+btn_right:
+  type: 'button'
+  text: 'Right'
+  pos_hint:
+    center_x: 0.85
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.turn_right
+  
+btn_clear:
+  type: 'button'
+  text: 'Clear'
+  pos_hint:
+    center_x: 0.95
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: Editor.clear
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.95
+    center_y: 0.95
+  size_hint: 0.1, 0.1
+  link: home

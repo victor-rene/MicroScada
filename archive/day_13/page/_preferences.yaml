@@ -1,0 +1,52 @@
+lbl_title:
+  type: 'label'
+  text: 'Preferences'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.85
+  font_size: 36
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: home
+  
+lbl_width:
+  type: 'label'
+  text: 'Width'
+  pos_hint:
+    center_x: 0.4
+    center_y: 0.7
+  size_hint: 0.2, 0.05
+  
+ti_width:
+  type: 'textinput'
+  text: '800'
+  multiline: False
+  validate: Preferences.set_width
+  pos_hint:
+    center_x: 0.6
+    center_y: 0.7
+  size_hint: 0.2, 0.05
+  
+lbl_height:
+  type: 'label'
+  text: 'Height'
+  pos_hint:
+    center_x: 0.4
+    center_y: 0.6
+  size_hint: 0.2, 0.05
+  
+ti_height:
+  type: 'textinput'
+  text: '600'
+  multiline: False
+  validate: Preferences.set_height
+  pos_hint:
+    center_x: 0.6
+    center_y: 0.6
+  size_hint: 0.2, 0.05

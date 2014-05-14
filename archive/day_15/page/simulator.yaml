@@ -1,0 +1,44 @@
+lbl_title:
+  type: 'label'
+  text: 'Pipeline simulator'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  size_hint: 0.1, 0.
+  font_size: 24
+  
+simul_grid:
+  type: 'simul-grid'
+  rows: 7
+  cols: 7
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  size_hint: 0.7, 0.7
+  
+btn_start:
+  type: 'button'
+  text: 'Start'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  click: Simulator.start
+  
+btn_stop:
+  type: 'button'
+  text: 'Stop'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  click: Simulator.stop
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  link: home

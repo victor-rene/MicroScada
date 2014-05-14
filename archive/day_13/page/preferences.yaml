@@ -1,0 +1,46 @@
+lbl_title:
+  type: 'label'
+  text: 'Preferences'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.85
+  font_size: 36
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: home
+  
+btn_default:
+  type: 'button'
+  text: 'Default'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.65
+  size_hint: 0.2, 0.1
+  click: Preferences.default_theme
+  link: preferences
+  
+btn_light:
+  type: 'button'
+  text: 'Light'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  size_hint: 0.2, 0.1
+  click: Preferences.light_theme
+  link: preferences
+  
+btn_dark:
+  type: 'button'
+  text: 'Dark'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.35
+  size_hint: 0.2, 0.1
+  click: Preferences.dark_theme
+  link: preferences
