@@ -1,0 +1,41 @@
+lbl_title:
+  type: 'label'
+  text: 'Simulator info'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+  
+lbl_content:
+  type: 'label'
+  text: |
+    [b]Pipeline grid[/b]
+    
+    There are three changes compared to the editor. We have to display water, and the state
+    of the valves and pumps [+/-].
+    
+    [b]Intelligent network?[/b]
+    
+    Here, things are really tricky. We use a recursive path finding algorithm for the water
+    movement. The technique is a bit complicated, so let just say that the simulation isn't
+    perfect. With more time, we could measure the flow of water moving from one pipe to another,
+    but we can't.
+    
+    That's because when the pump generates water, we search for the closest pipe which isn't
+    filled yet, until the amount of fluid generated is depleted. Using this technique, water
+    never moves from one pipe to another which is enough for the visual part. But we don't have
+    the information necessary to implement a flowmeter for example. That's why we falled back
+    to measuring the levels with gauges.
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  markup: True
+    
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: simulator

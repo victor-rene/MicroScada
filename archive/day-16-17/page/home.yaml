@@ -1,0 +1,93 @@
+lbl_title:
+  type: 'label'
+  text: 'MicroScada'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.9
+  font_size: 36
+
+lbl_editor:
+  type: 'label'
+  text: "\nCreate a pipeline with pumps, valves and gauges."
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.6
+  size_hint: 0.9, 0.15
+  
+lbl_simulator:
+  type: 'label'
+  text: "\nActivate the pumps to inject or remove water.\nBlock / unblock the flow with valves.\nThe gauges measure the water level."
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.3
+  size_hint: 0.9, 0.15
+  
+lbl_animation:
+  type: 'label'
+  text: "\nChoose a source of data for the variables.\nDatabinding animates the controls in real time.\nValues are saved in the database."
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.6
+  size_hint: 0.9, 0.15
+  
+lbl_graph:
+  type: 'label'
+  text: "\nDisplay the values over time from the database.\nContains data from animation and simulation.\nTouch the graph to scroll."
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.3
+  size_hint: 0.9, 0.15
+  
+btn_about:
+  type: 'button'
+  text: 'About'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: about
+  
+btn_animation:
+  type: 'button'
+  text: 'Animation'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.7
+  size_hint: 0.2, 0.1
+  link: animation
+  
+btn_graph:
+  type: 'button'
+  text: 'Graph'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.4
+  size_hint: 0.2, 0.1
+  link: graph
+  
+btn_theme:
+  type: 'button'
+  text: 'Theme'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: theme
+
+btn_editor:
+  type: 'button'
+  text: 'Pipeline editor'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.7
+  size_hint: 0.2, 0.1
+  link: editor
+  
+btn_simulator:
+  type: 'button'
+  text: 'Pipeline simulator'
+  pos_hint:
+    center_x: 0.25
+    center_y: 0.4
+  size_hint: 0.2, 0.1
+  link: simulator

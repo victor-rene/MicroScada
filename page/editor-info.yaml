@@ -1,0 +1,48 @@
+lbl_title:
+  type: 'label'
+  text: 'Editor info'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+  
+lbl_content:
+  type: 'label'
+  text: |
+    [b]Pipeline grid[/b]
+    
+    To encode the map of the network, we use a very simple technique. The cells are made
+    of a two dimensions array. Each cell contains information about sections of pipe and
+    their orientation, but also eventually addons like gauges and valves. Pumps are only
+    connected to one section.
+    
+    PyYAML makes it very easy to serialize and deserialize the grid. This allows us to
+    change the implementation without having to rewrite custom code for this purpose.
+    However, keep in mind that with each new version, there might be some conflicts.
+    It can be necessary to version each map file, so that a different loading / converting
+    code can be used.
+    
+    Example:
+      - !!python/object:editor.Cell {addon: valve, pattern: '0101', type: pipe}
+      
+    The pattern '0101' is for cardinal directions: NESW. 0 = nothing, 1 = pipe section.
+    That's all we need to encode the network.
+      
+    [b]Editor[/b]
+    
+     Really straightforward here. We just update a string with the name of the last pressed
+     button. This sets the 'mode' of the editor, so that we know how to edit the cells being
+     touched.
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  markup: True
+    
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: editor

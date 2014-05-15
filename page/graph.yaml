@@ -6,6 +6,15 @@ lbl_title:
     center_y: 0.95
   size_hint: 0.1, 0.
   font_size: 24
+
+btn_info:
+  type: 'button'
+  text: 'Info'
+  pos_hint:
+    center_x: 0.95
+    center_y: 0.95
+  size_hint: 0.1, 0.1
+  link: graph-info
   
 btn_back:
   type: 'button'

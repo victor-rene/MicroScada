@@ -1,0 +1,50 @@
+lbl_title:
+  type: 'label'
+  text: 'Graph info'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+  
+lbl_content:
+  type: 'label'
+  text: |
+    [b]Display[/b]
+    The data points are made three values: variable name, value and timestamp. After
+    selection of the variable and date, we query the database. The data points are then
+    mapped to screen coordinates.
+    
+    The construction of the graph requires a bit of mathematics. It's affected by zoom
+    and an offset is necessary to scroll to the left or right. We also need the min and max
+    values from the variable metadata.
+  
+    scale_y = (value - min_val) / (max_val - min_val)
+    y = self.height * scale_y + self.y
+      
+    str_time = util.get_time_str(timestamp)
+    scale_x = util.get_time_float(str_time)
+    x = self.width * scale_x * self.zoom + self.x - self.offset
+    
+    The offset is calculated as follow:
+    min_offset = 0
+    max_offset = self.width * self.zoom - self.width
+    dx = touch.dx / self.zoom
+    new_offset = self.offset + dx
+    
+    With x and y calculated, we only add the points falling inside the bounds of the control.
+    if x >= self.x and x <= self.right:
+      self.points.append(x)
+      self.points.append(y)
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  markup: True
+    
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: graph

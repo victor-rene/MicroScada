@@ -1,7 +1,7 @@
 MicroScada
 ==========
 
-Demo SCADA framework for desktop and mobile
+Teaching software architecture with a demo SCADA application
 
 Setup
 -----

@@ -1,0 +1,47 @@
+lbl_title:
+  type: 'label'
+  text: 'Theme info'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+  
+lbl_content:
+  type: 'label'
+  text: |
+    [b]A skinnable application[/b]
+    A singleton class can hold all the parameters we need to customize the look.
+    Create a configuration file (*.ini) in you like to remember user preferences.
+    
+    class Preferences:
+      foreground = white
+      background = black
+  
+    [b]Controls[/b]
+    A good way to build a skinnable application is to create a folder for each skin.
+    Give all the graphics the same name. In the code, you want a variable folder name.
+    
+    Code (image path): theme_folder + theme_name + img_name
+    Dark theme: theme/dark/button.png
+    Light theme: theme/light/button.png
+    
+    This way, you can add new skins later on very easily.
+    
+    [b]Fonts[/b]
+    Fonts are not images. So we can't use the same technique to change the text color.
+    Instead use a foreground color variable. A common technique is to allow child controls
+    to inherit properties of their parent. So you set the font color on the main window,
+    and done! If that is not possible, just add a variable to your singleton class.
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  markup: True
+    
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: theme

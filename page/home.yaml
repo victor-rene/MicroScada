@@ -6,6 +6,22 @@ lbl_title:
     center_y: 0.9
   font_size: 36
 
+lbl_subtitle:
+  type: 'label'
+  text: 'Teaching software architecture with a demo SCADA application'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.85
+
+btn_info:
+  type: 'button'
+  text: 'Info'
+  pos_hint:
+    center_x: 0.95
+    center_y: 0.95
+  size_hint: 0.1, 0.1
+  link: home-info
+  
 lbl_editor:
   type: 'label'
   text: "\nCreate a pipeline with pumps, valves and gauges."
@@ -32,7 +48,7 @@ lbl_animation:
   
 lbl_graph:
   type: 'label'
-  text: "\nDisplay the values over time from the database.\nContains data from animation and simulation.\nTouch the graph to scroll."
+  text: "\nDisplay the values over time from the database.\nContains data from animation and simulation.\nTouch the graph to scroll, with two fingers to zoom."
   pos_hint:
     center_x: 0.75
     center_y: 0.3

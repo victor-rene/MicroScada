@@ -1,0 +1,46 @@
+lbl_title:
+  type: 'label'
+  text: 'About'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+
+img_blog:
+  type: 'image'
+  source: 'vr_logo_128.png'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.75
+    
+lbl_blog:
+  type: 'label'
+  text: 'http://victor-rene.com'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.6
+  font_size: 24
+  
+img_site:
+  type: 'image'
+  source: 'logiqub_128.png'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.35
+    
+lbl_site:
+  type: 'label'
+  text: 'http://logiqub.com'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.2
+  font_size: 24
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: home

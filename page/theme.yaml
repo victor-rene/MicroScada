@@ -15,12 +15,21 @@ btn_back:
   size_hint: 0.2, 0.1
   link: home
   
+btn_info:
+  type: 'button'
+  text: 'Info'
+  pos_hint:
+    center_x: 0.95
+    center_y: 0.95
+  size_hint: 0.1, 0.1
+  link: theme-info
+
 btn_default:
   type: 'button'
   text: 'Default'
   pos_hint:
-    center_x: 0.5
-    center_y: 0.65
+    center_x: 0.75
+    center_y: 0.5
   size_hint: 0.2, 0.1
   click: Preferences.default_theme
   link: theme
@@ -29,7 +38,7 @@ btn_light:
   type: 'button'
   text: 'Light'
   pos_hint:
-    center_x: 0.5
+    center_x: 0.25
     center_y: 0.5
   size_hint: 0.2, 0.1
   click: Preferences.light_theme
@@ -40,7 +49,7 @@ btn_dark:
   text: 'Dark'
   pos_hint:
     center_x: 0.5
-    center_y: 0.35
+    center_y: 0.5
   size_hint: 0.2, 0.1
   click: Preferences.dark_theme
   link: theme

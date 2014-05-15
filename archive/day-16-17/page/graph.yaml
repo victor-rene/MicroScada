@@ -1,0 +1,107 @@
+lbl_title:
+  type: 'label'
+  text: 'Graph'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  size_hint: 0.1, 0.
+  font_size: 24
+  
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.8
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  link: home
+  
+lbl_tmax:
+  type: 'GraphLabel'
+  text: 'tmax'
+  pos_hint:
+    center_x: 0.9
+    center_y: 0.25
+  size_hint: 0.1, 0.05
+  
+lbl_tmin:
+  type: 'GraphLabel'
+  text: 'tmin'
+  pos_hint:
+    center_x: 0.1
+    center_y: 0.25
+  size_hint: 0.1, 0.05
+
+lbl_tmid:
+  type: 'GraphLabel'
+  text: 'tmid'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.25
+  size_hint: 0.1, 0.05
+  
+graph:
+  type: graph
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.6
+  size_hint: 0.8, 0.6
+  listener: lbl_tmin, lbl_tmid, lbl_tmax
+  
+lbl_max:
+  type: 'GraphLabel'
+  text: 'max'
+  pos_hint:
+    center_x: 0.05
+    center_y: 0.9
+  size_hint: 0.1, 0.05
+  
+lbl_min:
+  type: 'GraphLabel'
+  text: 'min'
+  pos_hint:
+    center_x: 0.05
+    center_y: 0.3
+  size_hint: 0.1, 0.05
+
+vl:
+  type: 'var-label'
+  size_hint: 0.8, 0.05
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.15
+  listener: graph, lbl_min, lbl_max
+  
+date_picker:
+  type: 'DatePicker'
+  pos_hint:
+    center_x: 0.2
+    center_y: 0.05
+  size_hint: 0.2, 0.1
+  listener: graph
+  
+lbl_zoom:
+  type: 'label'
+  text: 'x1.0'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.05
+  size_hint: 0.1, 0.05
+  
+btn_zoom_in:
+  type: 'button'
+  text: 'Zoom in'
+  pos_hint:
+    center_x: 0.4
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: get_widget('graph').zoom_in
+  
+btn_zoom_out:
+  type: 'button'
+  text: 'Zoom out'
+  pos_hint:
+    center_x: 0.6
+    center_y: 0.05
+  size_hint: 0.1, 0.1
+  click: get_widget('graph').zoom_out

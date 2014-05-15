@@ -1,0 +1,47 @@
+lbl_title:
+  type: 'label'
+  text: 'Animation info'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+  
+lbl_content:
+  type: 'label'
+  text: |
+    It's all about the data! For a computer program, data resides in different memory places
+    from registers and cache, to the RAM or even the hard drive. Each of these locations,
+    despite obvious differences, share a common characteristic. We access them via standard
+    Input/Output operations: read or write. That's an abstraction we want to use to make our
+    data technique portable and extensible.
+    
+    We want to write: datasource.read() and datastore.write() no matter what kind of technology
+    is used behind the method call.
+    
+    [b]Data source[/b]
+    A real data source would be an OPC server. For our project, we didn't prioritize this aspect
+    because we just know it works, but also because a random number generator is sufficient.
+    
+    [b]Data binding[/b]
+    The interesting part. Seperation of the view and the model, like in the MVP or MVC patterns,
+    will allow us to create bindable controls. We only need to specify which variable is the source
+    and the control is animated after each value change. The technique we use is so simple, it's
+    almost dirty. We abuse the getattr and setattr Python functions, to avoid complex event
+    handling. The only danger is memory leaks, if we don't clean up properly. But given the scope
+    of the project, it's not a priority.
+    
+    [b]Data store[/b]
+    INSERT INTO table VALUES(name, value, timestamp) at regular intervals.
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  markup: True
+    
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: animation

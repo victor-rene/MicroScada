@@ -1,0 +1,44 @@
+lbl_title:
+  type: 'label'
+  text: 'Home info'
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.95
+  font_size: 24
+  
+lbl_content:
+  type: 'label'
+  text: |
+    [b]Navigation concept[/b]
+    
+    The navigation system is thought like web servers and browsers.A pageloader module
+    loads the page upon a navigation request.
+    
+    In kivy terms, we keep a reference to the root widget, so that we can clear
+    its content, and rebuild the page. We also keep track of navigation links.
+    
+    [b]API of pageloader module[/b]
+    
+    root_widget = RootWidget()
+    links = dict()
+
+    load_page(name): returns yaml object, dictionary with gui elements
+    build_page(layout, page): 1. instantiate gui elements, 2. affect properties and methods
+    open_page(name, layout=None): built to insert the content of a page on any kivy layout
+      allows composition like iframes
+    navigate(instance): calls opens_page after checking the target of the link
+    get_widget(id): since we don't use the kv language, we have to implement a way to search
+      our controls by name
+  pos_hint:
+    center_x: 0.5
+    center_y: 0.5
+  markup: True
+    
+btn_back:
+  type: 'button'
+  text: 'Back'
+  pos_hint:
+    center_x: 0.75
+    center_y: 0.1
+  size_hint: 0.2, 0.1
+  link: home
